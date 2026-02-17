@@ -119,16 +119,16 @@ export default function Login() {
                                     return (
                                         <Field data-invalid={isInvalid}>
                                             <FieldLabel htmlFor={field.name}>Senha</FieldLabel>
-                                                <Input
-                                                    id={field.name}
-                                                    name={field.name}
-                                                    type="password"
-                                                    value={field.state.value}
-                                                    onBlur={field.handleBlur}
-                                                    onChange={(e) => field.handleChange(e.target.value)}
-                                                    placeholder="Digite sua senha"
-                                                    aria-invalid={isInvalid}
-                                                />
+                                            <Input
+                                                id={field.name}
+                                                name={field.name}
+                                                type="password"
+                                                value={field.state.value}
+                                                onBlur={field.handleBlur}
+                                                onChange={(e) => field.handleChange(e.target.value)}
+                                                placeholder="Digite sua senha"
+                                                aria-invalid={isInvalid}
+                                            />
                                             {isInvalid && (
                                                 <FieldError errors={field.state.meta.errors} />
                                             )}
@@ -142,12 +142,12 @@ export default function Login() {
                 <CardFooter>
                     <Field orientation="horizontal">
                         <div className="flex flex-col w-full">
-                        <Button type="submit" className="text-white font-bold" form="bug-report-form">
-                            Login
-                        </Button>
-                        <p className="text-sm text-gray-500 mt-2 text-center">
-                            Não tem uma conta? <Link href="/register">Cadastre-se</Link>
-                        </p>
+                            <Button type="submit" className="text-white font-bold" form="bug-report-form">
+                                Login
+                            </Button>
+                            <p className="text-sm text-gray-500 mt-2 text-center">
+                                Não tem uma conta? <Link href="/register">Cadastre-se</Link>
+                            </p>
                         </div>
                     </Field>
                 </CardFooter>
